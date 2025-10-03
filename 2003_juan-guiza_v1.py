@@ -24,7 +24,10 @@ class Stack():
             self.tamano-=1
         return
     def peek(self):
-        return self.top.valor
+        if(self.tamano==0):
+            print("ERROR:EMPTY")
+        else:
+            return self.top.valor
     def size(self):
         return self.tamano
     
@@ -97,3 +100,4 @@ main()
     Analisis de Complejidad:
     Todas las operaciones son O(1) ya que ninguna depende de la cantidad de datos entrantes, todas las operaciones se hacen en tiempo constante
 """
+
