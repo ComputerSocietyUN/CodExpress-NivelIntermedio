@@ -20,16 +20,20 @@ class Stack():
         if(self.tamano==0):
             print("ERROR:EMPTY")
         else:
+            print(f"El valor {self.top.valor}  fue eliminado")
             self.top=self.top.siguiente
             self.tamano-=1
+            
         return
     def peek(self):
         if(self.tamano==0):
             print("ERROR:EMPTY")
+            return 
         else:
-            return self.top.valor
+            print(self.top.valor)
+            return 
     def size(self):
-        return self.tamano
+        print(self.tamano)
     
 
 def main():
@@ -46,9 +50,9 @@ def main():
         elif(entrada[0]=="POP"):
             Pila.pop()
         elif(entrada[0]=="PEEK"):
-           print( Pila.peek())
+           Pila.peek()
         elif(entrada[0]=="SIZE"):
-            print(Pila.size())
+            Pila.size()
         cuenta+=1
 main()
 
@@ -66,6 +70,8 @@ main()
     SIZE
 
     Salidas:
+    El valor 377.34  fue eliminado
+    El valor 45  fue eliminado
     Pera
     1
 
@@ -73,7 +79,7 @@ main()
     Entradas:
     7
     POP
-    POP
+    PEEK
     PUSH Banano
     SIZE
     PUSH Rabano
@@ -95,9 +101,11 @@ main()
     PEEK
 
     Salidas:
+    El valor 323  fue eliminado
     63673.3
 
     Analisis de Complejidad:
     Todas las operaciones son O(1) ya que ninguna depende de la cantidad de datos entrantes, todas las operaciones se hacen en tiempo constante
 """
+
 
